@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Playfair_Display, Lato } from "next/font/google";
+
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme.provider";
 import Navigation from "@/components/navigation";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair-display",
-});
-const lato = Lato({
-  subsets: ["latin"],
-  variable: "--font-lato",
-  weight: ["100", "300", "400", "700", "900"],
-});
+import { fontvariables } from "@/constants/fonts";
 
 export const metadata: Metadata = {
   title: "Nest",
@@ -30,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider>
         <body
-          className={`${inter.variable} ${playfairDisplay.variable} ${lato.variable} bg-indigo-50 dark:bg-indigo-950`}
+          className={`${fontvariables} selection:bg-fuchsia-300 selection:text-fuchsia-900 font-body bg-cloud-50 dark:bg-night text-cloud-800 dark:text-zinc-50`}
         >
           <Navigation />
           {children}

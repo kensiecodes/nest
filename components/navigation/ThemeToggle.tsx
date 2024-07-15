@@ -28,19 +28,19 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="relative w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 overflow-hidden"
+      className="relative w-8 h-8 rounded-full overflow-hidden"
       aria-label="Toggle theme"
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center transition-all duration-300 ease-in-out">
         <FaSun
-          className={`absolute w-6 h-6 text-yellow-500 transition-all duration-300 ${
+          className={`absolute w-6 h-6 text-cloud-800 transition-all duration-300 ${
             theme === "dark"
               ? "-translate-y-full opacity-0"
               : "translate-y-0 opacity-100"
           }`}
         />
         <LuMoon
-          className={`absolute w-6 h-6 text-indigo-500 transition-all duration-300 ${
+          className={`absolute w-6 h-6 text-cloud-50 dark:text-fawn transition-all duration-300 ${
             theme === "dark"
               ? "translate-y-0 opacity-100"
               : "translate-y-full opacity-0"
